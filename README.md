@@ -1,25 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
 # FaultLine
 
-This repository contains the current FaultLine client, API routes, and local development server.
+FaultLine is a decision-intelligence platform for founders, builders, and operators to document real startup decisions, share post-mortems, save useful lessons, and build a professional learning profile.
 
-## Run Locally
+## Live Demo
 
-Prerequisite: Node.js
+https://faultlinee.vercel.app
 
-1. Install dependencies with `npm install`
-2. Set the required keys in `.env`
-3. Start local development with `npm run dev`
+## What It Does
 
-## Production
+- Google authentication with Supabase Auth
+- User onboarding and profile setup
+- Editable professional profile
+- Decision/story feed
+- Story bookmarking and profile bookmark count
+- Story publishing flow
+- AI-assisted decision analysis
+- Notifications and saved collections API foundation
+- Production deployment on Vercel
+- Supabase-backed database and auth system
 
-Build with `npm run build`
+## Tech Stack
 
-Start the production server with `npm start`
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Supabase Auth
+- Supabase Database
+- Vercel Serverless API
+- Gemini API
+- Lucide React Icons
 
-## Vercel
+## Project Structure
 
-The project includes `vercel.json` and an `api/[...path].ts` serverless entry for deployment on Vercel.
+```txt
+.
+├── api/                    # Vercel serverless API routes
+├── src/
+│   ├── components/         # React UI components
+│   ├── utils/              # API, Supabase, story utilities
+│   ├── App.tsx             # Main app shell
+│   └── types.ts            # Shared TypeScript types
+├── supabase/
+│   ├── schema.sql          # Main database schema
+│   └── repair_schema.sql   # Repair/migration SQL helpers
+├── .env.example            # Environment variable template
+├── package.json
+└── vercel.json
